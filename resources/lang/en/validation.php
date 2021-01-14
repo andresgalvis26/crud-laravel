@@ -129,8 +129,22 @@ return [
     */
 
     'custom' => [
-        'attribute-name' => [
-            'rule-name' => 'custom-message',
+        'nombre' => [
+            'required' => 'El nombre es requerido.',
+            'string' => 'El nombre tiene que ser un texto.',
+            'max:255' => 'El nombre es demasiado largo. Máximo 255 caracteres.'
+        ],
+
+        'apellido' => [
+            'required' => 'El apellido es requerido.',
+            'string' => 'El apellido tiene que ser un texto.',
+            'max:255' => 'El apellido es demasiado largo. Máximo 255 caracteres.'
+        ],
+
+        'edad' => [
+            'required' => 'La edad es requerida.',
+            'integer' => 'La edad tiene que ser un número.',
+            'max:255' => '...'
         ],
     ],
 
