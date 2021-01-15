@@ -14,16 +14,17 @@
               <th>Nombre</th>
               <th>Apellido</th>
               <th>Edad</th>
+              <th>Acciones</th>
             </tr>
           </thead>
 
           <tbody>
             @foreach($users as $user)
             <tr>
-              <th>{{ $user->id}}</th>
-              <th>{{ $user->Nombre}}</th>
-              <th>{{ $user->Apellido}}</th>
-              <th>{{ $user->Edad}}</th>
+              <td>{{ $user->id}}</td>
+              <td>{{ $user->Nombre}}</td>
+              <td>{{ $user->Apellido}}</td>
+              <td>{{ $user->Edad}}</td>
             </tr>
             @endforeach
           </tbody>

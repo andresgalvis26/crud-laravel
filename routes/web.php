@@ -11,6 +11,7 @@
 |
 */
 
+// Ruta para visualizar los usuarios que están en la BD
 Route::get('/', 'UserController@listar');
 
 // Ruta para acceder al formulario de los usuarios
@@ -18,3 +19,6 @@ Route::get('/form', 'UserController@userform');
 
 // Ruta para guardar los usuarios en la BD
 Route::post('/save', 'UserController@save')->name('save');
+
+// Ruta para eliminar usuarios
+// Route::delete('/delete/{id}', 'UserController@delete')->name('delete');
