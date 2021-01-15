@@ -33,7 +33,14 @@
               <td>{{ $user->Nombre}}</td>
               <td>{{ $user->Apellido}}</td>
               <td>{{ $user->Edad}}</td>
+
               <td>
+
+                <!-- Botón para editar información de los usuarios -->
+                <a href="{{ route ('editform' , $user->id)}}" class="btn btn-primary mb-2">
+                  <i class="fas fa-pencil-alt"></i>
+                </a>
+
 
                 <!-- Formulario para eliminar el usuario seleccionado -->
                 <form action="{{ route('delete', $user->id)}}" method="POST">
@@ -43,7 +50,6 @@
                     <!-- Uso del icono de basura rojo -->
                     <i class="fas fa-trash-alt"></i>
                   </button>
-
                 </form>
               </td>
             </tr>

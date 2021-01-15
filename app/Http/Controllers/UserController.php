@@ -12,7 +12,7 @@ class UserController extends Controller
 
   // Listado de los usuarios en la BD
   public function listar(){
-    $data['users'] = Empleado::paginate(5);
+    $data['users'] = Empleado::paginate(4);
 
     return view('usuarios.listar', $data);
   }
@@ -44,5 +44,22 @@ class UserController extends Controller
       Empleado::destroy($id);
 
       return back()->with('usuarioEliminado', 'El usuario ha sido eliminado.');
+  }
+
+  // Formulario para editar la información de los usuarios
+  public function editform($id){
+    // Tomar y utilizar todos los campos relacionados con el ID
+    $usuario = Empleado::findOrFail($id);
+
+    return view('usuarios.editform', compact('usuario'));
+
+  }
+
+  // Edición de los usuarios
+  public function edit(Request $request, $id){
+    $datosUsuario = request()->except((['_token', '_method']));
+    Empleado::where('id', '=', $id)->update($datosUsuario);
+
+    return back()->with('usuarioModifcado', 'El usuario ha sido modificado con éxito.');
   }
 }
