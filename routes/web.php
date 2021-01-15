@@ -21,4 +21,4 @@ Route::get('/form', 'UserController@userform');
 Route::post('/save', 'UserController@save')->name('save');
 
 // Ruta para eliminar usuarios
-// Route::delete('/delete/{id}', 'UserController@delete')->name('delete');
+Route::delete('/delete/{id}', 'UserController@delete')->name('delete');

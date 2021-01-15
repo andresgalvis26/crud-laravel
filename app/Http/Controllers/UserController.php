@@ -12,7 +12,7 @@ class UserController extends Controller
 
   // Listado de los usuarios en la BD
   public function listar(){
-    $data['users'] = Empleado::paginate(8);
+    $data['users'] = Empleado::paginate(5);
 
     return view('usuarios.listar', $data);
   }
@@ -36,5 +36,13 @@ class UserController extends Controller
     Empleado::insert($userdata);
 
     return back()->with('usuarioGuardado', 'Usuario guardado.');
+  }
+
+  // Eliminar usuarios
+  public function delete($id)
+  {
+      Empleado::destroy($id);
+
+      return back()->with('usuarioEliminado', 'El usuario ha sido eliminado.');
   }
 }

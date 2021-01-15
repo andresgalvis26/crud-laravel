@@ -7,6 +7,14 @@
     <div class="col-md-10">
       <h2 class="text-center mb-5">EMPLEADOS</h2>
 
+      <!-- Mensaje flash -->
+      @if(session('usuarioEliminado'))
+      <div class="alert alert-success">
+        {{ session('usuarioEliminado')}}
+      </div>
+      @endif
+
+      <!-- Tabla para visualizar los registros en la BD -->
         <table class="table table-bordered table-striped text-center">
           <thead>
             <tr>
@@ -25,6 +33,19 @@
               <td>{{ $user->Nombre}}</td>
               <td>{{ $user->Apellido}}</td>
               <td>{{ $user->Edad}}</td>
+              <td>
+
+                <!-- Formulario para eliminar el usuario seleccionado -->
+                <form action="{{ route('delete', $user->id)}}" method="POST">
+                  @csrf @method('DELETE')
+
+                  <button type="submit" onclick="return confirm('¿Desea eliminar este usuario?')" class="btn btn-danger">
+                    <!-- Uso del icono de basura rojo -->
+                    <i class="fas fa-trash-alt"></i>
+                  </button>
+
+                </form>
+              </td>
             </tr>
             @endforeach
           </tbody>
