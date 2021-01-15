@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('usuarios.listar');
-});
+Route::get('/', 'UserController@listar');
 
+// Ruta para acceder al formulario de los usuarios
 Route::get('/form', 'UserController@userform');
 
+// Ruta para guardar los usuarios en la BD
 Route::post('/save', 'UserController@save')->name('save');

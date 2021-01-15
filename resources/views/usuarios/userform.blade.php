@@ -46,12 +46,18 @@
               <input type="text" name="edad" class="form-control col-md-9">
             </div><br>
 
-            <div class="row form-group">
-              <button type="submit" name="" class="btn btn-success col-md-9 offset-2">Guardar</button>
-            </div>
+            <center>
+              <div class="row form-group">
+                <button type="submit" name="" class="btn btn-success col-md-8 offset-2">GUARDAR</button>
+              </div>
+            </center>
 
           </div>
         </form>
+
+        <center>
+          <a class="btn btn-primary col-md-8" href="{{ url('/') }}">VER USUARIOS</a>
+        </center><br>
       </div>
     </div>
   </div>

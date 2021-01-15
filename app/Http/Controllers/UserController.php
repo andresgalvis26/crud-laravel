@@ -10,6 +10,13 @@ use Illuminate\Http\Response;
 class UserController extends Controller
 {
 
+  // Listado de los usuarios en la BD
+  public function listar(){
+    $data['users'] = Empleado::paginate(8);
+
+    return view('usuarios.listar', $data);
+  }
+
   // Formulario del usuario
   public function userform(){
     return view('usuarios.userform');
