@@ -8,6 +8,8 @@
       <h2 class="text-center mb-5">EMPLEADOS</h2>
 
       <!-- Realizando una modificación para hacer commit y ver cómo se ve en GitHub -->
+      <!-- Realizando otra modificación desde el portatil para hacer commit y ver cómo actualiza -->
+      <!-- Esto es una prueba -->
 
       <!-- Mensaje flash -->
       @if(session('usuarioEliminado'))
