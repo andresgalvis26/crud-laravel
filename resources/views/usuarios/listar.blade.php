@@ -7,6 +7,8 @@
     <div class="col-md-10">
       <h2 class="text-center mb-5">EMPLEADOS</h2>
 
+      <!-- Realizando una modificación para hacer commit y ver cómo se ve en GitHub -->
+
       <!-- Mensaje flash -->
       @if(session('usuarioEliminado'))
       <div class="alert alert-success">
