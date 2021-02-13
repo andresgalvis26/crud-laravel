@@ -10,6 +10,7 @@
       <!-- Realizando una modificación para hacer commit y ver cómo se ve en GitHub -->
       <!-- Realizando otra modificación desde el portatil para hacer commit y ver cómo actualiza -->
       <!-- Esto es una prueba -->
+      <!-- Probando el nombre de usuario -->
 
       <!-- Mensaje flash -->
       @if(session('usuarioEliminado'))
